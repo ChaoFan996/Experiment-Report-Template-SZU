@@ -30,9 +30,9 @@
 % ----------------------------
 % 页眉页脚设置
 % ----------------------------
-\pagestyle{fancy}
+% \pagestyle{fancy}
 \fancyhf{} % 清空默认页眉页脚
-\fancyhead[L]{深圳大学实验报告} % 左侧页眉文字
+% \fancyhead[L]{深圳大学实验报告} % 左侧页眉文字
 \fancyhead[C]{} % 中间空
 \fancyhead[R]{} % 右侧空
 
@@ -50,17 +50,34 @@
     \vspace*{2cm}
     \Huge{\textbf{深 \ 圳 \ 大 \ 学 \ 实 \ 验  \ 报 \ 告}}\\[1.5cm]
     
-    \Large{课程名称：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{项目名称：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{学 \quad \quad 院：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{专 \quad \quad 业：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{指导教师：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{报告人：\underline{\hspace{3cm}} \hspace{0.5cm} 学号：\underline{\hspace{3cm}}}\\[0.5cm]
-    \Large{实验时间：\underline{\hspace{8cm}}}\\[0.5cm]
-    \Large{提交时间：\underline{\hspace{8cm}}}\\[1.5cm]
+    {\Large\textbf{课程名称}\quad\underline{\makebox[8cm][c]{Python程序设计}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{项目名称}}
+\underline{\makebox[8cm][c]{}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{学 \quad \quad 院}}
+\underline{\makebox[8cm][c]{人工智能学院}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{专 \quad \quad 业}}
+\underline{\makebox[8cm][c]{}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{指导教师}}
+\underline{\makebox[8cm][c]{舒婷}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{报 \quad 告 \quad 人}}
+\underline{\makebox[3cm][c]{}}
+\hspace{0.5cm}
+\textbf{学号}
+\underline{\makebox[3cm][c]{}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{实验时间}}
+\underline{\makebox[8cm][c]{}}}\\[0.5cm]
+{\Large
+\noindent\makebox[3.2cm][l]{\textbf{提交时间}}
+\underline{\makebox[8cm][c]{}}}\\[1.5cm]
 
     \vfill
-    \Large{教务处制}
+    \Large{\textbf{教务处制}}
 \end{titlepage}
 
 \newpage
@@ -125,14 +142,14 @@ Discuss any errors, inefficiencies, or areas for improvement.
   \draw[thick] 
     ($(current page.north west)+(2cm,-3cm)$) 
     rectangle 
-    ($(current page.south east)+(-2cm,2.5cm)$);
+    ($(current page.south east)+(-2cm,3.5cm)$);
 \end{tikzpicture}
 
 \vspace{1cm}
 
 % 批阅区
 \noindent \textbf{指导教师批阅意见：}
-\vspace{5cm}
+\vspace{6cm}
 \hfill
 
 \vspace{1cm}
@@ -143,18 +160,35 @@ Discuss any errors, inefficiencies, or areas for improvement.
 
 \vspace{1cm}
 
-\noindent \textbf{指导教师签字：}
-\vspace{2cm}
+\noindent
 \hfill
+\textbf{指导教师签字：}\quad\quad\quad\quad\quad\\[0.5cm]
+
+\hfill
+\textbf{年}\quad\quad
+\textbf{月}\quad\quad
+\textbf{日}\quad
 
 \vspace{1cm}
 
 % 备注部分
 \noindent \textbf{备注：}
-\begin{itemize}
-    \item 报告内的项目或内容设置，可根据实际情况加以调整和补充。
-    \item 教师批改学生实验报告时间应在学生提交实验报告时间后 10 日内。
-\end{itemize}
+
+% 框外的注释
+\begin{tikzpicture}[remember picture, overlay]
+  \node[
+    anchor=north west,
+    inner sep=0pt,
+    text width=\dimexpr\paperwidth-4cm\relax
+  ] at ($(current page.south west)+(2cm,3.1cm)$) {
+    \begin{minipage}{\dimexpr\paperwidth-4cm\relax}
+      \small
+      \noindent
+      \textbf{注：}\;1、报告内的项目或内容设置，可根据实际情况加以调整和补充。\\[0.2cm]
+      \phantom{\textbf{注：}\;}2、教师批改学生实验报告时间应在学生提交实验报告时间后 10 日内。
+    \end{minipage}
+  };
+\end{tikzpicture}
 
 % ============================================================
 %                      文档结束
