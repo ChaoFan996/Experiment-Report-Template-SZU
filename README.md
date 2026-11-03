@@ -6,6 +6,10 @@ Experiment Report Template in LaTeX for SZU Undergraduates
 ## News
 
 [Nov. 25] First release. 
+Download from 
+https://github.com/ChaoFan996/Experiment-Report-Template-SZU
+and 
+[Oct. 21, 2026] Updated by TingShu.
 
 ---
 
@@ -18,5 +22,6 @@ Experiment Report Template in LaTeX for SZU Undergraduates
 ---
 
 For questions, please contact the authors: 
-- Chao Fan: chaofan996@szu.edu.cn 
+- Chao Fan: chaofan996@szu.edu.cn
+- Ting Shu: tingshu@szu.edu.cn
 - Kewei Ou: 2510673021@mails.szu.edu.cn
